@@ -1,0 +1,136 @@
+/* 
+CMS Ad4Games
+*/
+
+* {
+    box-sizing: border-box;   
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    width: 100%;
+    background-color: #efefef;
+}
+
+header {
+    height: 75px;
+    display: flex;
+}
+
+header h1 {
+    display: inline-block;
+    font-size: 23px;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    margin-left: 10px;
+    text-transform: uppercase;
+    vertical-align: middle;
+    color: #4B4B4B;
+}
+
+#mainContainer {
+    width: 100%;
+    display: flex;
+}
+
+#leftPanel {
+    display: inline-block;
+    width: 300px;
+    background-color: #1F2124;
+}
+
+#rightPanel {
+    display: inline-block;
+    width: calc(100vw - 300px);
+    padding: 20px;
+}
+
+footer {
+    height: 80px;
+    text-align: center;
+    line-height: 80px;}
+
+.square {
+    width: 25px;
+    height: 25px;
+    border: 3px solid #13895F;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+/* Menu Controller */
+.controllerMenuHorizontal li {
+    display: inline-block;
+}
+
+.controllerMenu {
+    width: calc(100vw - 300px);
+    background-color: white;
+    padding: 27px 50px;
+    box-shadow: 3px 0px 3px 3px rgba(161, 159, 125, 0.18);
+    display: flex;
+}
+
+.controllerMenu li {
+    display: inline-block;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: all 0.1s ease-in-out;
+}
+
+.controllerMenu li:hover a{
+    color: #13895F;
+}
+
+
+.controllerMenu a {
+    color: #7f7f7f;
+    display: block;
+    padding: 0 20px;
+    border-left: 2px solid #c5c5c5;
+    text-decoration: none;
+}
+
+
+
+/* Menu Action */
+.actionMenu li {
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+    text-transform: uppercase;
+    list-style-type: none;
+    transition: all 0.1s ease-in-out;
+}
+
+.actionMenu li:hover {
+    background-color: #343639;
+    padding-left: 10px;
+    border-left: 10px solid #13895F;
+}
+
+
+.actionMenu a {
+    color: #efefef;
+    display: block;
+    padding: 0 30px;
+
+    text-decoration: none;
+}
+
+
+.logo {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.logo:hover h1{
+    cursor: pointer;
+    color: #13895F;
+}

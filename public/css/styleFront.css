@@ -1,0 +1,780 @@
+/* CSS FrontOffice CMS Ad4Games */
+
+
+/*
+* Globals
+*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'OpenSans';
+    background-image: url("assets/images/bg_page.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+.mainContentPanel {
+    margin-top: 30px;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+/* Header --------------------------------------------------------------------------- */
+
+.navigation button:first-child {
+    margin-left: 5px;
+}
+
+.navigation button:last-child {
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+.navigation {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    outline: 2px solid gray;
+    background-color: rgba(0, 0, 0, 1);
+    display: flex;
+    align-items: center;
+}
+
+
+.navigation button {    
+
+    background-image: url("assets/images/bg_brown.jpg");
+    background-repeat: repeat;
+    border-color: grey;
+    border-width: 2px;
+
+    min-width: 185px;
+    width: 185px;
+    height: 42px;
+
+    margin-left: 3px;
+    margin-right: 3px;
+}   
+
+.navigation button p {
+    font-size: 17px !important;
+    font-weight: bold;
+}    
+
+.navigation button:hover p{
+    color: rgb(127, 255, 0);
+}
+
+.navigation button:hover {
+    border-color: rgb(127, 255, 0);
+}
+
+
+
+
+/* Accueil --------------------------------------------------------------------------- */
+
+#accueil .videoSlot {
+    background-color: black;
+    margin: auto;
+    height: calc(100vh - 30px);
+}
+
+#accueil .video {
+    height: inherit;
+    margin: auto;
+    display: block;
+}
+
+#accueil > .content {
+    width: 960px;
+    height: 600px;
+    padding: 15px;
+    position: absolute;
+    top: 10%;
+    left: 25%;
+    text-align: center;
+
+}
+
+#accueil h1 {
+    font-size: 30px;
+}
+
+#accueil > .content > .buttons > button {
+    width: 190px;
+    height: 42px;
+}
+
+#accueil > .content > .buttons {
+    margin-top: 20%;
+}
+
+#accueil > .content > .titles {
+    margin-top: 20px;
+}
+
+
+/* News ------------------------------------------------------------------------------------------------------------ */
+#news {
+    margin-top: 40px;
+    background-image: url("assets/images/bg_brown.jpg");
+    background-repeat: repeat;
+    width: 960px;
+    margin: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+#news svg path {
+    transition: 400ms;
+    transition-timing-function: ease-in-out;
+    fill: white;
+}
+
+#news #newsSliderRightButton, #news #newsSliderLeftButton {
+    background-color: #130d0c;
+    outline: 1px solid rgba(255, 255, 255, 0.5);
+    text-align: center;
+    border: none;
+    transition: 400ms;
+    transition-timing-function: ease-in-out;
+
+    width: 40px;
+    height: 40px;
+    margin: auto;
+
+    outline: thin solid white;
+    display: flex;
+}
+
+#news  #newsSliderRightButton:hover, #news #newsSliderLeftButton:hover {
+    outline: 1px solid rgba(127, 255, 0, 1);
+    transition: 200ms;
+    transition-timing-function: ease-in-out;
+}
+
+#news #newsSliderRightButton:hover svg path, #news #newsSliderLeftButton:hover svg path {
+    fill: rgba(127, 255, 0, 1);
+    transition: 200ms;
+    transition-timing-function: ease-in-out;
+}
+
+
+/* Partie Hover vidéo */
+#news .newsSlide:hover {
+    outline: 3px solid rgba(127, 255, 0, 1);
+    outline-offset: -3px;
+
+}
+
+#news sectionTitle {
+    margin-top: 60px;
+}
+
+
+#news .buttonDisable {
+    visibility: hidden;
+}
+
+#news .newsDotsButtons .active {
+    background-color: rgb(127, 255, 0);
+}
+
+#news .content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    padding-top: 30px;
+}
+
+#news .newsDotsButtons button {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-left: 5px;
+    margin-right: 5px;
+    outline: none;
+    border: none;
+}
+
+#news .newsDotsButtons {
+    width: 200px;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    text-align: center;
+}
+
+#news svg {
+    width: 25px;
+    height: 25px;
+    margin: auto;
+
+}
+
+
+#news .newsSlider {
+    width: 870px;
+    height: 150px;
+    margin: auto;
+    overflow: hidden;
+
+}
+
+#news .newsSliderWrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+    margin-left: -5px; /* -50% de la gouttière */
+
+}
+
+#news .newsSlide {
+    min-width: 430px;
+    width: 430px;
+    height: 100%;
+    margin: 0 5px;
+    overflow: hidden;
+    background-color: black;
+    display: flex;
+}
+
+#news .imgWidthInherit {
+    width: inherit;
+}
+
+#news .imgHeightInherit {
+    height: inherit;
+}
+
+#news .newsImage {
+    min-width: 230px;
+    width: 230px;
+    height: 100%;
+
+    /* positionnement des images */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#news .newsText {
+    min-width: 200px;
+    width: 200px;
+    height: 100%;
+    overflow: hidden;
+    background-color: red;
+
+    flex-basis: 40%;
+    background-color: #130d0c;  
+    padding: 15px;
+}
+
+#news .newsText {
+    font-size: 13px;
+}
+
+
+
+/* Introduction ----------------------------------------------------------------------- */
+#introduction {
+    margin: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    width: 960px;
+}
+
+#introduction .introSlide {
+    display: flex;
+    margin-top: 40px;
+    overflow: hidden;
+    height: 400px;
+}
+
+#introduction h2 {
+    color: #565353;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.introDescription {
+    background-image: url("assets/images/bg_brown.jpg");
+    background-size: auto;
+    background-repeat: repeat;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    min-width: 384px;
+}
+
+.introImage {
+    overflow: hidden;
+    display: flex;
+    min-width: 576px;
+    height: 400px;
+    background-color: black;
+    width: 576px;
+    display: flex;
+    justify-content: baseline;
+}
+
+.introText {
+    font-size: 14px;
+}
+
+
+#trailers {
+    background-image: url("assets/images/bg_dark.jpg");
+    background-repeat: repeat;
+    width: 960px;
+    margin: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+#trailers svg path {
+    transition: 400ms;
+    transition-timing-function: ease-in-out;
+    fill: white;
+}
+
+#trailers #trailersSliderRightButton, #trailers #trailersSliderLeftButton {
+    background-color: #130d0c;
+    outline: 1px solid rgba(255, 255, 255, 0.5);
+    text-align: center;
+    border: none;
+    transition: 400ms;
+    transition-timing-function: ease-in-out;
+
+    width: 40px;
+    height: 40px;
+    margin: auto;
+
+    outline: thin solid white;
+    display: flex;
+}
+
+#trailers  #trailersSliderRightButton:hover, #trailers #trailersSliderLeftButton:hover {
+    outline: 1px solid rgba(127, 255, 0, 1);
+    transition: 200ms;
+    transition-timing-function: ease-in-out;
+}
+
+#trailers #trailersSliderRightButton:hover svg path, #trailers #trailersSliderLeftButton:hover svg path {
+    fill: rgba(127, 255, 0, 1);
+    transition: 200ms;
+    transition-timing-function: ease-in-out;
+}
+
+
+/* Partie Hover vidéo */
+#trailers .trailersSlide:hover {
+    outline: 3px solid rgba(127, 255, 0, 1);
+    outline-offset: -3px;
+
+}
+
+#trailers sectionTitle {
+    margin-top: 60px;
+}
+
+
+#trailers .buttonDisable {
+    visibility: hidden;
+}
+
+#trailers .trailersDotsButtons .active {
+    background-color: rgb(127, 255, 0);
+}
+
+#trailers .content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    padding-top: 30px;
+}
+
+#trailers .trailersDotsButtons button {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-left: 5px;
+    margin-right: 5px;
+    outline: none;
+    border: none;
+}
+
+#trailers .trailersDotsButtons {
+    width: 200px;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    text-align: center;
+}
+
+#trailers svg {
+    width: 25px;
+    height: 25px;
+    margin: auto;
+
+}
+
+
+#trailers .trailersSlider {
+    width: 870px;
+    height: 250px;
+    margin: auto;
+    overflow: hidden;
+
+}
+
+#trailers .trailersSliderWrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+    margin-left: -5px; /* -50% de la gouttière */
+
+}
+
+#trailers .trailersSlide {
+    min-width: 430px;
+    width: 430px;
+    height: 100%;
+    margin: 0 5px;
+    overflow: hidden;
+    background-color: black;
+
+    /* positionnement des images */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgWidthInherit {
+    width: inherit;
+}
+
+.imgHeightInherit {
+    height: inherit;
+}
+
+
+/*  MODAL ------------------------------------------------------------------------------------------------------------- */ 
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+    background-color: black;
+    margin: auto;
+    margin-top: 7%;
+    border: 1px solid #888;
+    width: 70%;
+    height: 80%;
+    display: flex;
+}
+
+.close {
+    position: absolute;
+    right: 15%;
+}
+
+.close p {
+    font-size: 75px;
+    font-weight: bold;
+    color: dimgray;
+    margin-top: -160%;
+}
+
+.close p:hover,
+.close p:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+} 
+
+
+
+/* Gameplays Section ---------------------------------------------------------------------------------------------------------------- */
+#gameplays {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+#gameplays .gameplay {
+    width: 960px;
+    height: 550px;
+    margin: auto;
+    background-color: black;
+
+    /* positionnement des images */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#gameplays .gameplay:not(:first-child) {
+    margin-top: 40px;
+}
+
+
+#gameplays video {
+    width: inherit;
+    height: inherit;
+
+}
+
+#gameplays img {
+    width: inherit;
+    height: inherit;
+}
+
+#gameplays .content {
+    position: absolute;
+    width: 960px;
+    height: 550px;
+}
+
+#gameplays .content .sectionTitle {
+    margin-top: 30px;
+}
+
+#gameplays .content h2 {
+    font-size: 35px;
+    margin-top: 310px;
+
+}
+
+#gameplays .content > p {
+    color: white;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4), -1px 1px 10px rgba(0, 0, 0, 0.4), 1px -1px 10px rgba(0, 0, 0, 0.4), -1px -1px 10px rgba(0, 0, 0, 0.4);
+    font-size: 20px;
+    text-align: center;
+    margin: auto;
+
+    padding-bottom: 10px;        
+}
+
+#gameplays .content .buttons {
+    width: inherit;
+    height: 42px;
+    margin-top: 7px;
+
+    display: flex;
+    justify-content: center;
+}
+
+/* Buttons ---------------------------------------------------------------------------- */
+#gameplays button {    
+
+    background-color: rgba(0, 0, 0, 0.8);
+    border-color: grey;
+    border-width: thin;
+    border-width: 2px;
+
+    min-width: 185px;
+    width: 185px;
+    height: 42px;
+
+    margin-left: 3px;
+    margin-right: 3px;
+}   
+#gameplays button p {
+    font-size: 13px !important;
+    font-weight: bold;
+}    
+#gameplays button:hover p{
+    color: rgb(127, 255, 0);
+}
+#gameplays button:hover {
+    border-color: rgb(127, 255, 0);
+}
+
+#gameplays .sectionTitle h1{
+    overflow: hidden;
+    width: 560px;
+    margin: auto;
+}
+
+#gameplays h2, #gameplays .content > p {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+
+/* Buttons ---------------------------------------------------------------------------- */
+#accueil .buttons button {    
+    margin-bottom: 30px;
+
+    background-color: rgba(0, 0, 0, 0.8);
+    border-color: grey;
+    border-width: thin;
+}   
+#accueil button {
+    font-size: 18px;
+}    
+#accueil button:hover p{
+    color: rgb(127, 255, 0);
+}
+#accueil button:hover {
+    border-color: rgb(127, 255, 0);
+}
+
+/* Footer ------------------------------------------------------------------------------ */
+
+footer {
+    width: 100%;
+    background-color: #000;
+}
+
+.socialMedias {
+    height: 150px;
+    border-bottom: 1px solid white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text {
+    width: 375px;
+    height: 100px;
+
+}
+
+footer .text p {
+    line-height: 100px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.icons {
+    width: 375px;
+    height: 100px;
+
+}
+
+.icons p {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.icons svg {
+    margin: auto;
+    margin-top: 10px;
+}
+
+.iconsChart {
+    display: flex;
+}
+
+.infos {
+    height: 200px;
+    border-bottom: 1px solid white;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.text1 {
+    width: 320px;
+    padding: inherit;
+    padding-top: 0px;
+}
+.text2 {
+    width: 320px;
+    padding: inherit;
+    padding-top: 0px;
+}
+.classification {
+    width: 320px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.classification .age {
+    width: 65px;
+    height: 80px;
+    margin-top: 15px;
+}
+
+.classification .content {
+    width: 65px;
+    height: 65px;
+}
+
+.trademarks {
+    width: 350px;
+    height: 90px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.trademarks img {
+    margin: 10px;
+}
+
+
+/* Titles ------------------------------------------------------------------------------ */
+.sectionTitle {
+    margin: auto;
+    width: 620px;
+    height: 60px;
+
+    /* Background des titres */
+    background: url("assets/images/button_top.png") no-repeat center 0, url("assets/images/button_bottom.png") no-repeat center bottom;
+    background-color: #130d0c;  
+}
+
+h1, h2 {
+    text-align: center;
+    white-space: nowrap;
+    line-height: 60px;
+    height: 60px;
+    overflow: hidden;
+    color: white;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4), -1px 1px 10px rgba(0, 0, 0, 0.4), 1px -1px 10px rgba(0, 0, 0, 0.4), -1px -1px 10px rgba(0, 0, 0, 0.4);
+
+    font-size: 22px;
+    letter-spacing: 3px;
+}
+
+p {
+    color: white;
+}

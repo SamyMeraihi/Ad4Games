@@ -8,7 +8,7 @@ CREATE TABLE `user` (
     first_name varchar(100),
     last_name varchar(100),
     email varchar(255),
-    pwd varchar(50),
+    pwd varchar(255),
     age date,
     token char(32),
     `status` tinyint(4),
